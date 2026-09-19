@@ -713,3 +713,44 @@ table.data tr.highlight td {
 }
 .card-links { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.7rem; }
 .card-links .btn-pill { font-size: 0.73rem; padding: 0.26rem 0.6rem; }
+
+/* ---------- language distribution ---------- */
+.stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.2rem;
+  margin-bottom: 1.6rem;
+}
+.stat { display: flex; flex-direction: column; }
+.stat-num {
+  font-family: "Roboto Slab", Georgia, serif;
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--global-theme-color);
+}
+.stat-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+}
+.langbar {
+  display: flex;
+  width: 100%;
+  height: 0.62rem;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.7rem;
+  background-color: var(--global-code-bg-color);
+}
+.langbar span { display: block; height: 100%; }
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.1rem;
+  font-size: 0.82rem;
+  color: var(--global-text-color-light);
+  margin-bottom: 2rem;
+}
+.legend span.item { display: inline-flex; align-items: center; gap: 0.35rem; }
