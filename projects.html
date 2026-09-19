@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>projects | Jaesung Lee</title>
+<meta name="description" content="Robotics projects by Jaesung Lee — dexterous hands, tactile gloves, teleoperation, real-time control and robot learning.">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="canonical" href="https://jaylee00.github.io/projects.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("theme");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a class="navbar-brand" href="index.html">
+      <span class="brand-name">Jaesung Lee</span>
+      <span class="brand-sub">KIST &middot; Korea University</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">about</a></li>
+      <li><a href="publications.html">publications</a></li>
+      <li><a href="projects.html" class="active">projects</a></li>
+      <li><a href="cv.html">cv</a></li>
+      <li><a href="repositories.html">repositories</a></li>
+      <li>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+<div class="container">
+
+  <header class="post-header">
+    <h1 class="post-title">projects</h1>
+    <p class="post-description">Hardware, control stacks and learning pipelines for dexterous manipulation.</p>
+  </header>
+
+  <div class="grid">
+
+    <!-- ===== featured: DexFIT ===== -->
+    <div class="card featured-card" id="dexfit">
+      <img class="card-img" src="assets/img/dexfit_teaser.jpg" alt="DexFIT: isomorphic tactile glove transferring contact forces to the KISTAR hand">
+      <div class="card-body">
+        <div class="card-meta" style="margin-bottom:0.5rem;">
+          <span class="tag featured">IROS 2026</span>
+          <span class="tag">first author</span>
+        </div>
+        <div class="card-title" style="font-size:1.25rem;">
+          <a href="https://jaylee00.github.io/Dex-FIT/" target="_blank" rel="noopener">DexFIT &mdash; Force Informed Transfer for Dexterous Manipulation</a>
+        </div>
+        <div class="card-text" style="font-size:0.92rem;">
+          <p>
+            A 16-DoF wearable glove whose joint structure is mechanically identical to the target robot hand.
+            Because the kinematics match one to one, retargeting disappears from the pipeline. Fingertip
+            tactile readings drive a Force Generation module that adds supplementary joint flexion, so the
+            robot squeezes in proportion to the operator's own pressure.
+          </p>
+          <p>
+            At deployment a vision-free Diffusion Policy runs on proprioceptive data alone, while an Adaptive
+            Force Control module watches for stalls and compensates for rising friction. The full system
+            reaches <strong>100% success</strong> on in-hand light bulb rotation, <strong>34.5% faster</strong>
+            and with <strong>16% less energy</strong> than position-only isomorphic control.
+          </p>
+        </div>
+        <div class="card-meta">
+          <span class="tag">tactile sensing</span>
+          <span class="tag">teleoperation</span>
+          <span class="tag">diffusion policy</span>
+          <span class="tag">hardware design</span>
+        </div>
+        <div class="card-links">
+          <a class="btn-pill" href="https://jaylee00.github.io/Dex-FIT/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> Project page</a>
+          <a class="btn-pill" href="https://github.com/JayLee00/Dex-FIT" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          <a class="btn-pill" href="publications.html#dexfit"><i class="fa-solid fa-file-lines"></i> Paper details</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== glove hardware ===== -->
+    <div class="card" id="glove">
+      <img class="card-img" src="assets/img/dexfit_glove.jpg" alt="16-DoF isomorphic wearable glove">
+      <div class="card-body">
+        <div class="card-title">Isomorphic Tactile Glove</div>
+        <div class="card-text">
+          16-DoF wearable glove, four fingers by four joints, with rotary potentiometer encoders at 12-bit
+          resolution and three fingertip tactile modules. Angle tracking reaches R&sup2; = 0.998 with 2.59&deg;
+          RMSE; the whole device weighs about 180 g in PLA and Onyx nylon composite.
+        </div>
+        <div class="card-meta">
+          <span class="tag">mechanical design</span>
+          <span class="tag">16 DoF</span>
+          <span class="tag">90 Hz</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== TACOS ===== -->
+    <div class="card" id="tacos">
+      <img class="card-img" src="assets/img/dexfit_tactile.jpg" alt="Fingertip barometric tactile sensor array">
+      <div class="card-body">
+        <div class="card-title"><a href="https://github.com/JayLee00/TACOS_Glove" target="_blank" rel="noopener">TACOS Glove</a></div>
+        <div class="card-text">
+          Tactile Augmented Control &amp; Optimization System. Twenty-one barometric taxels on flexible PCB
+          across three fingertips under 3 mm Ecoflex-50, with temperature-drift compensation by least squares.
+          Force repeatability RMSE 0.064 N over a 0&ndash;6 N range, response under 50 ms. Firmware through
+          serial receiver to Kalman filtering and visualisation.
+        </div>
+        <div class="card-meta">
+          <span class="tag">sensor design</span>
+          <span class="tag">embedded C</span>
+          <span class="tag">calibration</span>
+        </div>
+        <div class="card-links">
+          <a class="btn-pill" href="https://github.com/JayLee00/TACOS_Glove" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== multi-sensory hand ===== -->
+    <div class="card" id="kistar-hand">
+      <img class="card-img" src="assets/img/dexfit_hand.jpg" alt="Multi-sensory 16-DoF KISTAR robot hand">
+      <div class="card-body">
+        <div class="card-title">Multi-Sensory Robot Hand</div>
+        <div class="card-text">
+          16-DoF robot hand carrying 60 barometric taxels at 250 Hz, twelve three-axis kinesthetic
+          force/torque sensors at 300 Hz and sixteen magnetic encoders, all over EtherCAT at 1 kHz. Tactile
+          sensitivity reaches 1.5 mN.
+        </div>
+        <div class="card-meta">
+          <span class="tag">EtherCAT</span>
+          <span class="tag">tactile</span>
+          <span class="tag">kinesthetic F/T</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== KISTAR URDF ===== -->
+    <div class="card" id="kistar-urdf">
+      <img class="card-img" src="assets/img/kistar_hand.jpg" alt="KISTAR Hand URDF render">
+      <div class="card-body">
+        <div class="card-title"><a href="https://github.com/JayLee00/KISTAR_URDF" target="_blank" rel="noopener">KISTAR_URDF</a></div>
+        <div class="card-text">
+          Open-source URDF and MuJoCo MJCF distribution of the KISTAR Hand family, covering the KISTAR Hand
+          and KISTAR-SON in left and right variants. Preview renders regenerate from the MJCF files with one
+          script. Released under BSD-3-Clause; I handled the URDF, MJCF and STL conversion.
+        </div>
+        <div class="card-meta">
+          <span class="tag">open source</span>
+          <span class="tag">MuJoCo</span>
+          <span class="tag">URDF</span>
+        </div>
+        <div class="card-links">
+          <a class="btn-pill" href="https://github.com/JayLee00/KISTAR_URDF" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== learning pipeline ===== -->
+    <div class="card" id="dexfit-pipeline">
+      <img class="card-img" src="assets/img/dexfit_pipeline.jpg" alt="Teleoperation to imitation learning pipeline">
+      <div class="card-body">
+        <div class="card-title"><a href="https://github.com/JayLee00/dexfit-glove-teleoperation" target="_blank" rel="noopener">Teleoperation &rarr; Imitation Learning Pipeline</a></div>
+        <div class="card-text">
+          End-to-end stack from glove teleoperation to demonstration capture in HDF5, then behaviour cloning
+          and diffusion policy training, then execution on the robot. Ships the paper's 80 robomimic-compatible
+          demonstration files alongside the trained checkpoints.
+        </div>
+        <div class="card-meta">
+          <span class="tag">imitation learning</span>
+          <span class="tag">ROS 2</span>
+          <span class="tag">HDF5</span>
+        </div>
+        <div class="card-links">
+          <a class="btn-pill" href="https://github.com/JayLee00/dexfit-glove-teleoperation" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== dual arm impedance ===== -->
+    <div class="card" id="dual-arm">
+      <img class="card-img" src="assets/img/dexfit_setup.jpg" alt="Dual-arm Franka FR3 experimental platform">
+      <div class="card-body">
+        <div class="card-title"><a href="https://github.com/JayLee00/Dual_Arm_Hand_Imp_Ctrl_Tele_V1.0" target="_blank" rel="noopener">Dual-Arm Impedance Control</a></div>
+        <div class="card-text">
+          Franka FR3 dual-arm joint torque impedance control in a 1 kHz real-time callback, paired with two
+          16-DoF hands over SOEM EtherCAT. Processes share state through System V shared memory, with a ROS 2
+          bridge feeding MoveIt trajectories in and publishing joint states out.
+        </div>
+        <div class="card-meta">
+          <span class="tag">C++</span>
+          <span class="tag">real-time</span>
+          <span class="tag">libfranka</span>
+        </div>
+        <div class="card-links">
+          <a class="btn-pill" href="https://github.com/JayLee00/Dual_Arm_Hand_Imp_Ctrl_Tele_V1.0" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== vive teleop ===== -->
+    <div class="card" id="vive-teleop">
+      <div class="card-ph"><i class="fa-solid fa-vr-cardboard"></i></div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://github.com/JayLee00/vive_franka_teleop" target="_blank" rel="noopener">Whole-Upper-Body Teleoperation</a></div>
+        <div class="card-text">
+          Vive trackers drive both arms while the glove drives the hands. Tracker deltas from an engage anchor
+          become absolute end-effector targets across the network; glove joints map one to one with ramping,
+          exponential smoothing and rate limits. A three-pedal foot switch handles stop, go and logging.
+        </div>
+        <div class="card-meta">
+          <span class="tag">teleoperation</span>
+          <span class="tag">SteamVR</span>
+          <span class="tag">ROS 2</span>
+        </div>
+        <div class="card-links">
+          <a class="btn-pill" href="https://github.com/JayLee00/vive_franka_teleop" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== robot agent system ===== -->
+    <div class="card" id="agent-system">
+      <div class="card-ph"><i class="fa-solid fa-diagram-project"></i></div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://github.com/JayLee00/2026MOTIE_Robotic-hand" target="_blank" rel="noopener">Robot Agent System</a></div>
+        <div class="card-text">
+          A single command runs the whole fruit manipulation demo: grasp the object, reorient it in hand,
+          infer its physical properties, then place it. Four skill modules run across two machines on one ROS 2
+          domain, coordinated by a pipeline runner with per-stage timeouts and failure handling, alongside a
+          MoveIt digital twin.
+        </div>
+        <div class="card-meta">
+          <span class="tag">system integration</span>
+          <span class="tag">SAM3</span>
+          <span class="tag">in-hand manipulation</span>
+        </div>
+        <div class="card-links">
+          <a class="btn-pill" href="https://github.com/JayLee00/2026MOTIE_Robotic-hand" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== grasp perception ===== -->
+    <div class="card" id="grasp-perception">
+      <div class="card-ph"><i class="fa-solid fa-camera"></i></div>
+      <div class="card-body">
+        <div class="card-title">Grasp Perception for FR3</div>
+        <div class="card-text">
+          Two pipelines turning RGB-D into executable grasps for the FR3 and its four-finger hand.
+          <a href="https://github.com/JayLee00/grasp_sam_fr3" target="_blank" rel="noopener">GraspSAM</a> adds
+          rotational test-time augmentation and mask PCA to correct the horizontal bias in its training
+          distribution, with AprilTag-calibrated world coordinates shared between camera consumers.
+          <a href="https://github.com/JayLee00/Dexgen_jay" target="_blank" rel="noopener">GraspGen</a> pairs
+          SAM2-Large segmentation with 6-DoF grasp prediction from a wrist-mounted D435.
+        </div>
+        <div class="card-meta">
+          <span class="tag">perception</span>
+          <span class="tag">SAM2</span>
+          <span class="tag">RealSense</span>
+        </div>
+        <div class="card-links">
+          <a class="btn-pill" href="https://github.com/JayLee00/grasp_sam_fr3" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GraspSAM</a>
+          <a class="btn-pill" href="https://github.com/JayLee00/Dexgen_jay" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GraspGen</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== grasping stability ===== -->
+    <div class="card" id="grasp-stability">
+      <div class="card-ph"><i class="fa-solid fa-chart-line"></i></div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://github.com/JayLee00/Grasping-Stability" target="_blank" rel="noopener">Grasp Stability &amp; Regrasping</a></div>
+        <div class="card-text">
+          Experiment infrastructure for stability-scored regrasping: shared-memory bridges to the C++
+          controller, 1 kHz HDF5 logging with start and end markers, RealSense frame synchronisation, and
+          label post-processing for the resulting dataset.
+        </div>
+        <div class="card-meta">
+          <span class="tag">data collection</span>
+          <span class="tag">Python</span>
+          <span class="tag">in progress</span>
+        </div>
+        <div class="card-links">
+          <a class="btn-pill" href="https://github.com/JayLee00/Grasping-Stability" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== capstone ===== -->
+    <div class="card" id="capstone">
+      <div class="card-ph"><i class="fa-solid fa-bolt"></i></div>
+      <div class="card-body">
+        <div class="card-title"><a href="https://github.com/JayLee00/capstone-design" target="_blank" rel="noopener">Overload Detection for E-Scooters</a></div>
+        <div class="card-text">
+          Undergraduate capstone project. Pressure mapping sensors on the deck feed a machine learning model
+          that flags overloaded electric scooters, with Arduino firmware and a visualisation client.
+        </div>
+        <div class="card-meta">
+          <span class="tag">2024</span>
+          <span class="tag">sensors</span>
+          <span class="tag">machine learning</span>
+        </div>
+        <div class="card-links">
+          <a class="btn-pill" href="https://github.com/JayLee00/capstone-design" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Jaesung Lee. Design adapted from
+      <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener">al-folio</a>.
+      Hosted on GitHub Pages.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

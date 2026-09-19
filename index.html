@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jaesung Lee</title>
+<meta name="description" content="Jaesung Lee — robotics researcher at Korea University and the Center for Humanoid Research, KIST. Dexterous manipulation, tactile sensing, force-aware teleoperation and robot learning.">
+<meta name="author" content="Jaesung Lee">
+<link rel="icon" href="assets/img/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jaesung Lee">
+<meta property="og:description" content="Robotics researcher working on dexterous manipulation, tactile sensing and force-aware robot learning.">
+<meta property="og:image" content="https://jaylee00.github.io/assets/img/dexfit_teaser.jpg">
+<meta property="og:url" content="https://jaylee00.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://jaylee00.github.io/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("theme");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a class="navbar-brand" href="index.html">
+      <span class="brand-name">Jaesung Lee</span>
+      <span class="brand-sub">KIST &middot; Korea University</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="active">about</a></li>
+      <li><a href="publications.html">publications</a></li>
+      <li><a href="projects.html">projects</a></li>
+      <li><a href="cv.html">cv</a></li>
+      <li><a href="repositories.html">repositories</a></li>
+      <li>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+<div class="container">
+
+  <header class="post-header">
+    <h1 class="post-title">Jaesung Lee</h1>
+    <p class="post-description">Dexterous manipulation &middot; tactile sensing &middot; robot learning</p>
+  </header>
+
+  <div class="about-body clearfix">
+    <div class="profile">
+      <img src="assets/img/prof_pic.jpg" alt="Jaesung Lee">
+      <div class="more-info">
+        <p><strong>Center for Humanoid Research</strong></p>
+        <p>Korea Institute of Science and Technology</p>
+        <p>Korea University</p>
+        <p>Seoul, South Korea</p>
+      </div>
+    </div>
+
+    <p>
+      I am a robotics researcher at the <strong>Center for Humanoid Research, Korea Institute of Science
+      and Technology (KIST)</strong>, and at <strong>Korea University</strong>, in Seoul, South Korea.
+      I build the hardware and the learning systems that let multi-fingered robot hands handle contact-rich
+      tasks, and I care about the part most pipelines throw away: <em>force</em>.
+    </p>
+
+    <p>
+      My work runs end to end. I design wearable tactile interfaces and instrumented robot hands, build the
+      real-time control stack that drives them, collect demonstrations through them, and train policies on
+      what comes out. Recent projects cover 16-DoF data gloves with barometric tactile arrays, dual-arm
+      impedance control on Franka FR3 platforms, and vision-free diffusion policies for in-hand manipulation.
+    </p>
+
+    <p>
+      My most recent paper, <a href="https://jaylee00.github.io/Dex-FIT/"><strong>DexFIT</strong></a>, was
+      accepted at <strong>IROS 2026</strong>. It introduces a kinematically isomorphic tactile glove whose
+      joint structure is mechanically identical to the target robot hand, which removes retargeting from the
+      teleoperation pipeline entirely and transfers human contact forces to the robot in real time.
+    </p>
+
+    <p>
+      Research interests: dexterous manipulation, tactile and kinesthetic sensing, force-aware teleoperation,
+      imitation learning for contact-rich tasks, and robot hand design.
+    </p>
+  </div>
+
+  <div class="social">
+    <div class="social-icons">
+      <a href="mailto:jay.lee@kist.re.kr" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://github.com/JayLee00" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/jaesung-lee-00-jay-lee" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+    <p class="contact-note">jay.lee@kist.re.kr</p>
+  </div>
+
+  <h2 class="section-title">news</h2>
+  <div class="news">
+    <table>
+      <tbody>
+        <tr>
+          <td class="date">Sep 2026</td>
+          <td><strong>DexFIT</strong> is accepted at <strong>IROS 2026</strong>. The
+            <a href="https://jaylee00.github.io/Dex-FIT/">project page</a> is now online.</td>
+        </tr>
+        <tr>
+          <td class="date">Aug 2026</td>
+          <td>Released the robot agent system for fruit manipulation — grasping, in-hand reorientation,
+            physical-property inference and placement in a single pipeline.</td>
+        </tr>
+        <tr>
+          <td class="date">Jun 2026</td>
+          <td>Open-sourced <a href="https://github.com/JayLee00/KISTAR_URDF">KISTAR_URDF</a>, the URDF and
+            MuJoCo MJCF distribution of the KISTAR Hand family.</td>
+        </tr>
+        <tr>
+          <td class="date">Jan 2026</td>
+          <td>Started <a href="https://github.com/JayLee00/TACOS_Glove">TACOS Glove</a> — a 16-DoF data glove
+            with 21 barometric tactile channels.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="section-title">selected publications</h2>
+  <ol class="bibliography">
+    <li>
+      <div class="pub-preview">
+        <a href="https://jaylee00.github.io/Dex-FIT/" target="_blank" rel="noopener">
+          <img src="assets/img/dexfit_teaser.jpg" alt="DexFIT teaser: isomorphic glove transferring contact forces to the KISTAR hand">
+        </a>
+        <span class="pub-year">2026</span>
+      </div>
+      <div class="pub-body">
+        <div class="pub-title">
+          DexFIT: Force Informed Transfer for Dexterous Manipulation using Kinematically Isomorphic Tactile Glove
+          <span class="badge-accepted">Accepted</span>
+        </div>
+        <div class="pub-author">
+          <span class="me">Jaesung Lee</span>, Sungwoo Park, and Donghyun Hwang
+        </div>
+        <div class="pub-venue">
+          IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2026
+        </div>
+        <div class="pub-abstract">
+          A 16-DoF wearable glove mechanically identical to the target robot hand removes retargeting entirely
+          and transfers human contact forces in real time. A vision-free diffusion policy trained on the
+          resulting force-informed data reaches 100% completion on in-hand light bulb rotation, 34.5% faster
+          and with 16% less energy than position-only isomorphic control.
+        </div>
+        <div class="pub-links">
+          <a class="btn-pill" href="https://jaylee00.github.io/Dex-FIT/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> Project page</a>
+          <a class="btn-pill" href="https://github.com/JayLee00/Dex-FIT" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          <a class="btn-pill" href="https://github.com/JayLee00/dexfit-glove-teleoperation" target="_blank" rel="noopener"><i class="fa-solid fa-code"></i> Pipeline</a>
+        </div>
+        <details class="disclosure">
+          <summary>BibTeX</summary>
+          <pre>@inproceedings{lee2026dexfit,
+  title     = {DexFIT: Force Informed Transfer for Dexterous Manipulation
+               using Kinematically Isomorphic Tactile Glove},
+  author    = {Lee, Jaesung and Park, Sungwoo and Hwang, Donghyun},
+  booktitle = {IEEE/RSJ International Conference on Intelligent Robots
+               and Systems (IROS)},
+  year      = {2026}
+}</pre>
+        </details>
+      </div>
+    </li>
+  </ol>
+  <p><a href="publications.html">See all publications &rarr;</a></p>
+
+  <h2 class="section-title">selected projects</h2>
+  <div class="grid">
+
+    <div class="card">
+      <img class="card-img" src="assets/img/dexfit_glove.jpg" alt="DexFIT 16-DoF isomorphic tactile glove">
+      <div class="card-body">
+        <div class="card-title"><a href="projects.html#dexfit">DexFIT Glove</a></div>
+        <div class="card-text">
+          16-DoF kinematically isomorphic wearable glove with 21 barometric taxels across three fingertips.
+          Joint accuracy R&sup2; = 0.998, force repeatability RMSE 0.064 N.
+        </div>
+        <div class="card-meta">
+          <span class="tag featured">IROS 2026</span>
+          <span class="tag">hardware</span>
+          <span class="tag">tactile</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="card-img" src="assets/img/kistar_hand.jpg" alt="KISTAR Hand URDF model">
+      <div class="card-body">
+        <div class="card-title"><a href="projects.html#kistar-urdf">KISTAR_URDF</a></div>
+        <div class="card-text">
+          Open-source URDF and MuJoCo MJCF distribution of the KISTAR Hand family, with reproducible
+          preview rendering. BSD-3-Clause.
+        </div>
+        <div class="card-meta">
+          <span class="tag">open source</span>
+          <span class="tag">simulation</span>
+          <span class="tag">MuJoCo</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="card-img" src="assets/img/dexfit_hand.jpg" alt="Multi-sensory 16-DoF KISTAR robot hand">
+      <div class="card-body">
+        <div class="card-title"><a href="projects.html#dual-arm">Dual-Arm Impedance Control</a></div>
+        <div class="card-text">
+          Franka FR3 dual-arm torque impedance control at 1 kHz with EtherCAT-driven 16-DoF hands, shared
+          memory IPC and a ROS 2 bridge.
+        </div>
+        <div class="card-meta">
+          <span class="tag">control</span>
+          <span class="tag">real-time</span>
+          <span class="tag">ROS 2</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <p><a href="projects.html">See all projects &rarr;</a></p>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Jaesung Lee. Design adapted from
+      <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener">al-folio</a>.
+      Hosted on GitHub Pages.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

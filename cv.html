@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cv | Jaesung Lee</title>
+<meta name="description" content="Curriculum vitae of Jaesung Lee — robotics research, publications and technical skills.">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="canonical" href="https://jaylee00.github.io/cv.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("theme");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a class="navbar-brand" href="index.html">
+      <span class="brand-name">Jaesung Lee</span>
+      <span class="brand-sub">KIST &middot; Korea University</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">about</a></li>
+      <li><a href="publications.html">publications</a></li>
+      <li><a href="projects.html">projects</a></li>
+      <li><a href="cv.html" class="active">cv</a></li>
+      <li><a href="repositories.html">repositories</a></li>
+      <li>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+<div class="container">
+
+  <header class="post-header">
+    <h1 class="post-title">curriculum vitae</h1>
+    <p class="post-description">Jaesung Lee &middot; Seoul, South Korea &middot; jay.lee@kist.re.kr</p>
+  </header>
+
+  <div class="cv-section">
+    <h2 class="section-title" style="margin-top:0;">research experience</h2>
+
+    <div class="cv-entry">
+      <div class="cv-date">present</div>
+      <div class="cv-detail">
+        <div class="cv-role">Robotics Researcher</div>
+        <div class="cv-org">Center for Humanoid Research, Korea Institute of Science and Technology (KIST), Seoul</div>
+        <ul>
+          <li>Design and build wearable tactile interfaces and multi-sensory robot hands for contact-rich manipulation.</li>
+          <li>Develop the real-time control stack driving Franka FR3 dual-arm platforms with 16-DoF hands over EtherCAT.</li>
+          <li>Collect force-informed demonstrations and train imitation learning policies on the resulting data.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-date">present</div>
+      <div class="cv-detail">
+        <div class="cv-role">Graduate Researcher</div>
+        <div class="cv-org">Korea University, Seoul</div>
+        <ul>
+          <li>Research on dexterous manipulation, tactile sensing and robot learning, in affiliation with KIST.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================
+       EDUCATION — degrees and dates are not filled in yet.
+       Uncomment this block and complete the fields.
+
+  <div class="cv-section">
+    <h2 class="section-title">education</h2>
+    <div class="cv-entry">
+      <div class="cv-date">20XX &ndash; present</div>
+      <div class="cv-detail">
+        <div class="cv-role">M.S. / Ph.D. in (department)</div>
+        <div class="cv-org">Korea University, Seoul, South Korea</div>
+      </div>
+    </div>
+    <div class="cv-entry">
+      <div class="cv-date">20XX &ndash; 20XX</div>
+      <div class="cv-detail">
+        <div class="cv-role">B.S. in (department)</div>
+        <div class="cv-org">(university), South Korea</div>
+      </div>
+    </div>
+  </div>
+
+       ========================================================== -->
+
+  <div class="cv-section">
+    <h2 class="section-title">publications</h2>
+    <div class="cv-entry">
+      <div class="cv-date">IROS 2026</div>
+      <div class="cv-detail">
+        <div class="cv-role">
+          DexFIT: Force Informed Transfer for Dexterous Manipulation using Kinematically Isomorphic Tactile Glove
+        </div>
+        <div class="cv-org">
+          <strong>Jaesung Lee</strong>, Sungwoo Park, Donghyun Hwang &middot;
+          IEEE/RSJ International Conference on Intelligent Robots and Systems, 2026 &middot; accepted
+        </div>
+        <div class="pub-links" style="margin-top:0.4rem;">
+          <a class="btn-pill" href="https://jaylee00.github.io/Dex-FIT/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> Project page</a>
+          <a class="btn-pill" href="publications.html#dexfit"><i class="fa-solid fa-file-lines"></i> Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cv-section">
+    <h2 class="section-title">selected projects</h2>
+
+    <div class="cv-entry">
+      <div class="cv-date">2026</div>
+      <div class="cv-detail">
+        <div class="cv-role">DexFIT &mdash; force-informed teleoperation and policy learning</div>
+        <div class="cv-org">16-DoF isomorphic glove, force generation, adaptive force control, diffusion policy</div>
+        <ul>
+          <li>Removed retargeting from the teleoperation pipeline by matching glove and hand kinematics one to one.</li>
+          <li>Reached 100% completion on in-hand bulb rotation, 34.5% faster and 16% cheaper in energy than position-only control.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-date">2026</div>
+      <div class="cv-detail">
+        <div class="cv-role">Robot agent system for fruit manipulation</div>
+        <div class="cv-org">Grasping, in-hand reorientation, physical property inference and placement in one pipeline</div>
+        <ul>
+          <li>Integrated four skill modules across two machines on a single ROS 2 domain with staged failure handling.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-date">2026</div>
+      <div class="cv-detail">
+        <div class="cv-role">KISTAR_URDF &mdash; open-source hand models</div>
+        <div class="cv-org">URDF and MuJoCo MJCF distribution of the KISTAR Hand family, BSD-3-Clause</div>
+        <ul>
+          <li>Produced the URDF, MJCF and STL conversions and the reproducible preview rendering tooling.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-date">2026</div>
+      <div class="cv-detail">
+        <div class="cv-role">Dual-arm impedance control platform</div>
+        <div class="cv-org">Franka FR3 dual-arm with two 16-DoF hands, 1 kHz torque control, EtherCAT, ROS 2 bridge</div>
+      </div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-date">2024</div>
+      <div class="cv-detail">
+        <div class="cv-role">Overload detection for electric scooters</div>
+        <div class="cv-org">Undergraduate capstone &middot; pressure mapping sensors and machine learning</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cv-section">
+    <h2 class="section-title">technical skills</h2>
+
+    <div class="skill-row">
+      <div class="skill-name">Languages</div>
+      <div class="skill-list">C++, Python, C (embedded), MATLAB</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-name">Robotics</div>
+      <div class="skill-list">ROS 2 Humble, MoveIt, libfranka, SOEM EtherCAT, real-time control at 1 kHz, System V shared memory IPC</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-name">Simulation</div>
+      <div class="skill-list">MuJoCo, Isaac Sim, URDF and MJCF authoring, forward kinematics and inertia modelling</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-name">Learning</div>
+      <div class="skill-list">PyTorch, diffusion policy, behaviour cloning, robomimic-format datasets, SAM2 and SAM3, GraspGen</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-name">Sensing</div>
+      <div class="skill-list">Barometric tactile arrays, six-axis force/torque sensors, RealSense D435, AprilTag calibration, Vive trackers and SteamVR, Kalman filtering</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-name">Hardware</div>
+      <div class="skill-list">Flexible PCB design, KiCad, MCP3208 ADC and SPI sensor buses, Arduino and Mega2560 firmware, 3D printing in PLA and Onyx nylon composite</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-name">Data</div>
+      <div class="skill-list">HDF5 logging at 1 kHz, multi-sensor synchronisation, sensor drift compensation by least squares</div>
+    </div>
+  </div>
+
+  <div class="cv-section">
+    <h2 class="section-title">contact</h2>
+    <div class="skill-row">
+      <div class="skill-name">Email</div>
+      <div class="skill-list"><a href="mailto:jay.lee@kist.re.kr">jay.lee@kist.re.kr</a></div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-name">GitHub</div>
+      <div class="skill-list"><a href="https://github.com/JayLee00" target="_blank" rel="noopener">github.com/JayLee00</a></div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-name">LinkedIn</div>
+      <div class="skill-list"><a href="https://www.linkedin.com/in/jaesung-lee-00-jay-lee" target="_blank" rel="noopener">jaesung-lee-00-jay-lee</a></div>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Jaesung Lee. Design adapted from
+      <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener">al-folio</a>.
+      Hosted on GitHub Pages.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

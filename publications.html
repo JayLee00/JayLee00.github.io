@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>publications | Jaesung Lee</title>
+<meta name="description" content="Publications by Jaesung Lee — DexFIT, IROS 2026.">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="canonical" href="https://jaylee00.github.io/publications.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("theme");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a class="navbar-brand" href="index.html">
+      <span class="brand-name">Jaesung Lee</span>
+      <span class="brand-sub">KIST &middot; Korea University</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">about</a></li>
+      <li><a href="publications.html" class="active">publications</a></li>
+      <li><a href="projects.html">projects</a></li>
+      <li><a href="cv.html">cv</a></li>
+      <li><a href="repositories.html">repositories</a></li>
+      <li>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+<div class="container">
+
+  <header class="post-header">
+    <h1 class="post-title">publications</h1>
+    <p class="post-description">Peer-reviewed work, newest first.</p>
+  </header>
+
+  <h2 class="section-title">2026</h2>
+  <ol class="bibliography">
+    <li id="dexfit">
+      <div class="pub-preview">
+        <a href="https://jaylee00.github.io/Dex-FIT/" target="_blank" rel="noopener">
+          <img src="assets/img/dexfit_teaser.jpg" alt="DexFIT teaser figure">
+        </a>
+        <span class="pub-year">IROS<br>2026</span>
+      </div>
+      <div class="pub-body">
+        <div class="pub-title">
+          DexFIT: Force Informed Transfer for Dexterous Manipulation using Kinematically Isomorphic Tactile Glove
+          <span class="badge-accepted">Accepted</span>
+        </div>
+        <div class="pub-author">
+          <span class="me">Jaesung Lee</span><sup>1,2</sup>, Sungwoo Park<sup>1,2</sup>, and Donghyun Hwang<sup>2</sup>*
+        </div>
+        <div class="pub-venue">
+          IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2026<br>
+          <sup>1</sup>Korea University &nbsp;&middot;&nbsp; <sup>2</sup>Center for Humanoid Research, KIST
+          &nbsp;&middot;&nbsp; *Corresponding author
+        </div>
+
+        <div class="pub-links">
+          <a class="btn-pill" href="https://jaylee00.github.io/Dex-FIT/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> Project page</a>
+          <a class="btn-pill" href="https://github.com/JayLee00/Dex-FIT" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          <a class="btn-pill" href="https://github.com/JayLee00/dexfit-glove-teleoperation" target="_blank" rel="noopener"><i class="fa-solid fa-code"></i> Full pipeline</a>
+          <a class="btn-pill" href="https://github.com/JayLee00/KISTAR_URDF" target="_blank" rel="noopener"><i class="fa-solid fa-cube"></i> Hand model</a>
+        </div>
+
+        <details class="disclosure" open>
+          <summary>Abstract</summary>
+          <p style="font-size:0.9rem; margin-top:0.55rem;">
+            Acquiring high-quality demonstration data for dexterous robotic hand manipulation remains
+            challenging because conventional methods either lose critical force information during collection
+            or require complex, error-prone retargeting processes. In this paper, we propose
+            <strong>DexFIT</strong> (Dexterous Force-Informed Transfer), a system designed to transfer human
+            contact forces to a robotic hand in real time through a kinematically isomorphic wearable glove
+            equipped with integrated fingertip tactile sensors. The glove's 16-degree-of-freedom (DoF) joint
+            structure is mechanically identical to the target robot hand, thereby eliminating the need for
+            retargeting entirely. During data collection, a Force Generation (FG) module converts tactile
+            readings from the operator's fingertips into supplementary joint angle commands, enabling the
+            robot hand to generate contact forces proportional to the human's applied pressure. For autonomous
+            deployment, an Adaptive Force Control (AFC) module monitors task progress via the robot's onboard
+            tactile sensors and dynamically adjusts grasp forces. We train a vision-free Diffusion Policy on
+            collected proprioceptive data (joint positions, kinesthetic sensors, and tactile signals) and
+            evaluate the system on an in-hand light bulb rotation task. DexFIT achieves a 100% task completion
+            rate in its optimal configuration, with a 34.5% reduction in task completion time and 16%
+            reduction in energy consumption compared to position-only isomorphic control.
+          </p>
+        </details>
+
+        <details class="disclosure">
+          <summary>BibTeX</summary>
+          <pre>@inproceedings{lee2026dexfit,
+  title     = {DexFIT: Force Informed Transfer for Dexterous Manipulation
+               using Kinematically Isomorphic Tactile Glove},
+  author    = {Lee, Jaesung and Park, Sungwoo and Hwang, Donghyun},
+  booktitle = {IEEE/RSJ International Conference on Intelligent Robots
+               and Systems (IROS)},
+  year      = {2026}
+}</pre>
+        </details>
+      </div>
+    </li>
+  </ol>
+
+  <h2 class="section-title">DexFIT at a glance</h2>
+
+  <div class="figure">
+    <img src="assets/img/dexfit_framework.jpg" alt="DexFIT framework: force generation during data collection, adaptive force control at deployment">
+  </div>
+  <p class="caption">
+    Left: data acquisition with the Force Generator turning tactile readings into supplementary joint
+    commands. Right: vision-free Diffusion Policy with the Adaptive Force Controller at deployment.
+  </p>
+
+  <h3>Quantitative results</h3>
+  <p style="font-size:0.9rem;">
+    Ablation of DexFIT components on the in-hand light bulb rotation task. The task requires 300&deg;
+    cumulative rotation within 60 s against progressively increasing socket friction. Five trials per
+    condition, ten demonstrations each.
+  </p>
+  <div class="table-wrap">
+    <table class="data">
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Contact</th>
+          <th>FG</th>
+          <th>AFC</th>
+          <th>Success (%)</th>
+          <th>Time (s)</th>
+          <th>Ang. vel. (deg/s)</th>
+          <th>Energy (kJ)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Teleoperation (AFC off)</td><td>&#10007;</td><td>&#10007;</td><td>&#10007;</td><td>0</td><td>&mdash;</td><td>1.186</td><td>&mdash;</td></tr>
+        <tr><td>Teleoperation (AFC on)</td><td>&#10007;</td><td>&#10007;</td><td>&#10003;</td><td>0</td><td>&mdash;</td><td>3.881</td><td>&mdash;</td></tr>
+        <tr><td>Contact teleoperation (AFC off)</td><td>&#10003;</td><td>&#10007;</td><td>&#10007;</td><td>20</td><td>40.39</td><td>4.374</td><td>571.2</td></tr>
+        <tr><td>Contact teleoperation (AFC on)</td><td>&#10003;</td><td>&#10007;</td><td>&#10003;</td><td>100</td><td>41.86</td><td>6.603</td><td>576.3</td></tr>
+        <tr><td>FG teleoperation (AFC off)</td><td>&#10003;</td><td>&#10003;</td><td>&#10007;</td><td>100</td><td>31.48</td><td>7.366</td><td>543.9</td></tr>
+        <tr class="highlight"><td>DexFIT (ours)</td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td><td>100</td><td>26.45</td><td>9.107</td><td>479.9</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="caption">
+    Preliminary scaling: training on 40 force-generated demonstrations instead of 10 further reduces task
+    time to 24.22 s, raises angular velocity to 11.34 deg/s and cuts energy to 432.4 kJ.
+  </p>
+
+  <div class="figure">
+    <img src="assets/img/dexfit_setup.jpg" alt="Experimental setup for the in-hand light bulb rotation task">
+  </div>
+  <p class="caption">
+    Experimental setup. An RGB camera tracks the bulb angle and a six-axis force/torque sensor under the
+    socket logs applied forces. The task is vision-free; the robot arm stays in a fixed pose.
+  </p>
+
+  <!-- To add a new publication, copy one <li> block inside <ol class="bibliography"> above,
+       replace the fields, and drop a preview image into assets/img/. -->
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Jaesung Lee. Design adapted from
+      <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener">al-folio</a>.
+      Hosted on GitHub Pages.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
