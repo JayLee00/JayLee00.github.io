@@ -165,7 +165,6 @@ main { flex: 1 0 auto; }
   padding: 0 1.25rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 1rem;
 }
 
@@ -177,6 +176,7 @@ main { flex: 1 0 auto; }
   text-decoration: none;
   min-width: 0;
 }
+.navbar-brand { margin-right: auto; }
 .navbar-brand:hover { text-decoration: none; }
 .brand-name {
   font-family: "Roboto Slab", Georgia, serif;
@@ -242,6 +242,27 @@ main { flex: 1 0 auto; }
   font-size: 1.2rem;
   padding: 0.35rem 0.5rem;
 }
+
+/* LinkedIn button in navbar (visible on every screen size) */
+.nav-links { order: 1; }
+.nav-linkedin {
+  order: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.38rem 0.8rem;
+  border-radius: 999px;
+  background-color: #0a66c2;
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.nav-linkedin i { font-size: 1.05rem; }
+.nav-linkedin:hover { background-color: #004182; color: #ffffff; text-decoration: none; }
+.nav-toggle { order: 3; }
 
 /* ---------- page header ---------- */
 .post-header { margin: 2.6rem 0 1.6rem; }
@@ -626,6 +647,7 @@ footer.site-footer p { margin: 0; }
   }
   .nav-links.open { display: flex; }
   .nav-links a { padding: 0.55rem 0.2rem; }
+  .navbar-inner { gap: 0.5rem; }
 
   .post-title { font-size: 2.1rem; }
 
@@ -649,6 +671,11 @@ footer.site-footer p { margin: 0; }
   .cv-date { flex: 1 1 auto; }
   .skill-row { flex-direction: column; gap: 0.1rem; }
   .skill-name { flex: 1 1 auto; }
+}
+
+@media (max-width: 340px) {
+  .nav-linkedin span { display: none; }
+  .nav-linkedin { padding: 0.45rem 0.55rem; }
 }
 
 @media print {
